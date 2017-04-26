@@ -8,32 +8,26 @@ In this project we implement a deep learning model to learn the correct steering
 
 The goals / steps of this project are the following:
 
-- Use the simulator to collect data of good driving behavior
-- Build, a convolution neural network in Keras that predicts steering angles from images
-- Train and validate the model with a training and validation set
-- Test that the model successfully drives around track one without leaving the road
-- Summarize the results with a written report
+- Use a simulator to collect data of good driving behavior
+- Build a convolution neural network in Keras that predicts steering angles from images
+- Train and validate the model
+- Test that the model successfully drives around a track without leaving the road
 
 [image1]: ./images/img1.jpg
 [image2]: ./images/img2.jpg
 [image3]: ./images/img3.jpg
 [video]: ./video.mp4 "Video"
 
-### 2.Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-I use the NVIDIA architecture as my deep learning model. It consists of a normalization layer, followed by 5 convolution layers, followed by 4 fully connected layers.
+I implemented an architecture defined by NVIDIA as my deep learning model. It consists of a normalization layer, followed by 5 convolution layers, followed by 4 fully connected layers.
 
 The model includes RELU layers to introduce nonlinearity and the data is normalized in the model using a Keras lambda layer.
 
-### 3.Attempts to reduce overfitting in the model
-
 The data was randomly split between training (80%) and cross validation (20%) datasets in order to prevent orverfitting. I also trained the model on images coming from the two tracks available in order to help it to generalize.
 
-### 4.Model parameter tuning
 
-The model used an Adam optimizer, so the learning rate was not tuned manually.
-
-### 5.Appropriate training data
+### Training data
 
 Training data was chosen to keep the vehicle driving on the road. I used the following combination:
 
@@ -44,23 +38,13 @@ Training data was chosen to keep the vehicle driving on the road. I used the fol
 
 For details about how I created the training data, see the next section.
 
-### 6.Model Architecture and Training Strategy
-
 #### Solution Design Approach
-
-The chosen model architecture was established by NVIDIA for their Self-Driving Car program.
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set.
 
-The first experiments led to a good cross validation error but the car was driven properly through some of the steep curves. In order to improve the driving behavior, I spent time enhancing the training data set by focusing on curves and recovery from the sides of the road.
-
-At first, using images from the left and right side cameras did not improve the driving so I had to optimize the correction factor and find the right value in order to use this additional data and improving the car driving ability.
+The first experiments led to a good cross validation error but the car was driven properly through some of the steep curves. In order to improve the driving behavior, I spent time enhancing the training data set by focusing on curves and recovery from the sides of the road. At first, using images from the left and right side cameras did not improve the driving so I had to optimize the correction factor and find the right value in order to use this additional data and improving the car driving ability.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
-
-#### Final Model Architecture
-
-The final model architecture the NVIDIA architecture as my deep learning model. It consists of a normalization layer, followed by 5 convolution layers, followed by 4 fully connected layers.
 
 #### Creation of the Training Set &amp; Training Process
 
