@@ -1,10 +1,10 @@
 
 
-**Behavioral Cloning Project**
+## **Behavioral Cloning Project**
 
-**By Thomas Tartière**
+#### **By Thomas Tartière**
 
-In this project we implement a deep learning model to learn the correct steering angle for a car, using images taken from a camera at the front of the car.
+In this project we implement a deep learning model to learn the correct steering angle for a car, using images taken from a camera at the front of the car. Here's a [link to my video result](./video.mp4)
 
 The goals / steps of this project are the following:
 
@@ -17,31 +17,23 @@ The goals / steps of this project are the following:
 [image1]: ./images/img1.jpg
 [image2]: ./images/img2.jpg
 [image3]: ./images/img3.jpg
+[video]: ./video.mp4 "Video"
 
-1. 1.Files Submitted &amp; Code Quality
-
-My project includes the following files:
-
-- py containing the script to create and train the model
-- py for driving the car in autonomous mode
-- h5 containing a trained convolution neural network
-- pdf summarizing the results
-
-1. 2.Model Architecture and Training Strategy
+### 2.Model Architecture and Training Strategy
 
 I use the NVIDIA architecture as my deep learning model. It consists of a normalization layer, followed by 5 convolution layers, followed by 4 fully connected layers.
 
 The model includes RELU layers to introduce nonlinearity and the data is normalized in the model using a Keras lambda layer.
 
-1. 3.Attempts to reduce overfitting in the model
+### 3.Attempts to reduce overfitting in the model
 
 The data was randomly split between training (80%) and cross validation (20%) datasets in order to prevent orverfitting. I also trained the model on images coming from the two tracks available in order to help it to generalize.
 
-1. 4.Model parameter tuning
+### 4.Model parameter tuning
 
 The model used an Adam optimizer, so the learning rate was not tuned manually.
 
-1. 5.Appropriate training data
+### 5.Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used the following combination:
 
@@ -52,9 +44,9 @@ Training data was chosen to keep the vehicle driving on the road. I used the fol
 
 For details about how I created the training data, see the next section.
 
-1. 6.Model Architecture and Training Strategy
+### 6.Model Architecture and Training Strategy
 
-1. Solution Design Approach
+#### Solution Design Approach
 
 The chosen model architecture was established by NVIDIA for their Self-Driving Car program.
 
@@ -66,11 +58,11 @@ At first, using images from the left and right side cameras did not improve the 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-1. Final Model Architecture
+#### Final Model Architecture
 
 The final model architecture the NVIDIA architecture as my deep learning model. It consists of a normalization layer, followed by 5 convolution layers, followed by 4 fully connected layers.
 
-1. Creation of the Training Set &amp; Training Process
+#### Creation of the Training Set &amp; Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
