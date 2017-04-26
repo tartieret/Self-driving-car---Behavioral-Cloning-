@@ -27,7 +27,7 @@ The model includes RELU layers to introduce nonlinearity and the data is normali
 The data was randomly split between training (80%) and cross validation (20%) datasets in order to prevent orverfitting. I also trained the model on images coming from the two tracks available in order to help it to generalize.
 
 
-### Training data
+#### Training data
 
 Training data was chosen to keep the vehicle driving on the road. I used the following combination:
 
