@@ -24,7 +24,7 @@ I implemented an architecture defined by NVIDIA as my deep learning model. It co
 
 The model includes RELU layers to introduce nonlinearity and the data is normalized in the model using a Keras lambda layer.
 
-The data was randomly split between training (80%) and cross validation (20%) datasets in order to prevent orverfitting. I also trained the model on images coming from the two tracks available in order to help it to generalize.
+The data was randomly split between training (80%) and cross validation (20%) datasets in order to prevent overfitting. I also trained the model on images coming from the two tracks available in order to help it to generalize.
 
 
 #### Training data
@@ -42,7 +42,7 @@ For details about how I created the training data, see the next section.
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set.
 
-The first experiments led to a good cross validation error but the car was driven properly through some of the steep curves. In order to improve the driving behavior, I spent time enhancing the training data set by focusing on curves and recovery from the sides of the road. At first, using images from the left and right side cameras did not improve the driving so I had to optimize the correction factor and find the right value in order to use this additional data and improving the car driving ability.
+The first experiments led to a good cross validation error but the car was not driving properly through some of the steep curves. In order to improve the driving behavior, I spent time enhancing the training data set by focusing on curves and recovery from the sides of the road. At first, using images from the left and right side cameras did not improve the driving so I had to optimize the correction factor and find the right value in order to use this additional data and improving the car driving ability.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
